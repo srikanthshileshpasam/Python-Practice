@@ -1,1 +1,15 @@
 
+class search:
+    def __init__(self, s, l):
+        self.sentence = s
+        self.letter = l
+        
+    def searching(self):
+        print(self.sentence.split())
+    
+sentence_entry = input('Enter a sentence below:\n')
+letter_entry = input('Enter the letter below:\n')
+
+lookup = search(sentence_entry, letter_entry)
+
+lookup.searching()    
