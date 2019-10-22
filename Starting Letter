@@ -1,15 +1,20 @@
-
 class search:
     def __init__(self, s, l):
         self.sentence = s
         self.letter = l
         
     def searching(self):
-        print(self.sentence.split())
-    
+        self.sentence = self.sentence.split()
+        for word in self.sentence:
+            if word[0] == self.letter:
+                print(word)
+            else:
+                continue
+        
 sentence_entry = input('Enter a sentence below:\n')
 letter_entry = input('Enter the letter below:\n')
 
-lookup = search(sentence_entry, letter_entry)
+lookup = search(sentence_entry.lower(), letter_entry.lower())
 
-lookup.searching()    
+print(f'\n\n\nThe words beginning with {letter_entry} in the sentence you have given are:')
+lookup.searching()
