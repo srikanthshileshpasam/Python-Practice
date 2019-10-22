@@ -1,3 +1,6 @@
+# Skyline
+#Take an input from user and print it out alternating between capital and small letters
+
 class Skyline:
     def __init__(self, text):
         self.text = text
