@@ -1,21 +1,21 @@
-#Skyline
-#Take an input from user and print it out alternating between capital and small letters
-
 class Skyline:
     def __init__(self, text):
         self.text = text
     
     def converting(self):
         count = 0
+        answer = ''
         for letter in self.text:
             if count % 2 == 0:
-                self.text = print(letter.upper())
+                answer = answer + letter.upper()
                 count += 1
             else:
-                self.text = print(letter.lower())
+                answer = answer + letter.lower()
                 count += 1
+        print(answer)
 
 sentence = input('Enter the text below:\n')
-
 result = Skyline(sentence)
+
+print('\n\nThe Skyline result of the sentence is:')
 result.converting()
