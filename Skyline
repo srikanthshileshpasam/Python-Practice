@@ -15,10 +15,9 @@ class Skyline:
             else:
                 answer = answer + letter.lower()
                 count += 1
-        print(answer)
+        return answer
 
 sentence = input('Enter the text below:\n')
 result = Skyline(sentence)
 
-print('\n\nThe Skyline result of the sentence is:')
-result.converting()
+print(f'\n\nThe Skyline result of the sentence is:\n{result.converting()}')
