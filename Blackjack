@@ -1,0 +1,39 @@
+# Blackjack
+#3 integers between 1 and 11 are given. If their sum is less than or equal to 21, retrun the sum. If their sum exceeds 21 and there is a 11, reduce the total by 10. If the sum still exceeds 21, return 'Bust'.
+
+class Blackjack:
+    def __init__(self):
+        pass
+        
+    def win(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+        
+        total = self.a + self.b + self.c
+        
+        if total < 21:
+            return(total)
+        elif total == 21:
+            return 'Game'
+        elif (total > 21) and (self.a or self.b or self.c == 11):
+            if total - 10 > 21:
+                return 'Bust'
+            else:
+                return 'Retry'
+
+game = Blackjack()
+
+card_one = int(input('Enter the value of the first card:\n'))
+while card_one > 11:
+    card_one = int(input('Re enter the value of the first card:\n'))
+    
+card_two = int(input('Enter the value of the second card:\n'))
+while card_two > 11:
+    card_two = int(input('Re enter the value of the second card:\n'))
+
+card_three = int(input('Enter the value of the third card:\n'))
+while card_three > 11:
+    card_three = int(input('Re enter the value of the third card:\n'))
+    
+game.win(card_one, card_two, card_three)
