@@ -10,4 +10,8 @@ class Cylinder:
         return numpy.pi * (self.radius**2) * self.height
     
     def surface_area(self):
-        pass
+        return (2 * numpy.pi * self.radius * self.height) + (2 * numpy.pi * self.radius**2)
+    
+cyl = Cylinder(2,3)
+print(cyl.volume())
+print(cyl.surface_area())
